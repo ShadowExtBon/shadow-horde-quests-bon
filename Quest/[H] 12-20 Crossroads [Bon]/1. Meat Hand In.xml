@@ -1,0 +1,9 @@
+<ShadowProfile Condition="Data.HasCompletedQuest('Meats to Orgrimmar') == false">
+    <SetBaseSettings />
+    <If Condition="Data.HasActiveQuest('Meats to Orgrimmar') == false">
+        <TakeQuest NpcName="Zargh" QuestName="Meats to Orgrimmar" />
+    </If>
+    <SetBaseSettings />
+    
+    <ReturnQuest NpcName="Devrak" QuestName="Meats to Orgrimmar" />
+</ShadowProfile>

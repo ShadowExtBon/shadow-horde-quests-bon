@@ -1,0 +1,31 @@
+<ShadowProfile Condition="Data.HasCompletedQuest('Fungal Spores') == false">
+<Lua>HerbNodes[3640]=0</Lua>
+    <SetBaseSettings />
+    <If Condition="Data.HasActiveQuest('Fungal Spores') == false">
+        <TakeQuest NpcName="Apothecary Helbrim" QuestName="Fungal Spores" />
+
+    </If>
+    <SetBaseSettings />
+<SetTargetingMode Mode="Gather Only" />
+<SetEnableAutoHerb Value="true" />
+    <SetEnableQuestNodes Value="true" />
+    <AddHotspot X="133.78" Y="-1993.84" Z="95" Range="50" />
+    <AddHotspot X="121.64" Y="-1964.64" Z="90" Range="50" />
+    <AddHotspot X="118.24" Y="-1926.88" Z="90" Range="50" />
+    <AddHotspot X="53.39" Y="-1903.31" Z="89" Range="50" />
+    <AddHotspot X="-118.42" Y="-1895.07" Z="92" Range="50" />
+
+
+   
+
+    <SetEnableVendoring Value="true"/>
+    <SetVendorNpc NpcName="Uthrok"/>
+    <SetEnableRepairing Value="true"/>
+    <SetRepairNpc NpcName="Uthrok"/>
+    <SetTargetingMode Mode="Around Points" />
+    <ClearMonsterFilter/>
+        <While Condition="Data.QuestObjectiveIsComplete('Fungal Spores', 1) == false" >
+        <Wait Value="100" />
+    </While>
+    <ReturnQuest NpcName="Apothecary Helbrim" QuestName="Fungal Spores" />
+</ShadowProfile>

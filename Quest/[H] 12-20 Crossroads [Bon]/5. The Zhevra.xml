@@ -1,0 +1,25 @@
+<ShadowProfile Condition="Data.HasCompletedQuest('The Zhevra') == false">
+    <SetBaseSettings />
+    <If Condition="Data.HasActiveQuest('The Zhevra') == false">
+        <TakeQuest NpcName="Sergra Darkthorn" QuestName="The Zhevra" />
+
+    </If>
+    <SetBaseSettings />
+    <AddHotspot X="-700" Y="-2834" Z="95" Range="250" />
+    <AddHotspot X="-700" Y="-3062" Z="93" Range="250" />
+    <AddHotspot X="-917" Y="-2817" Z="93" Range="250" />
+    <AddHotspot X="-956" Y="-2516" Z="94" Range="250" />
+    <AddHotspot X="-866" Y="-2333" Z="93" Range="250" />
+   
+
+    <SetEnableVendoring Value="true"/>
+    <SetVendorNpc NpcName="Uthrok"/>
+    <SetEnableRepairing Value="true"/>
+    <SetRepairNpc NpcName="Uthrok"/>
+    <SetTargetingMode Mode="Around Points" />
+    <ClearMonsterFilter/>
+        <While Condition="Data.QuestObjectiveIsComplete('The Zhevra', 1) == false" >
+        <Wait Value="100" />
+    </While>
+    <ReturnQuest NpcName="Sergra Darkthorn" QuestName="The Zhevra" />
+</ShadowProfile>

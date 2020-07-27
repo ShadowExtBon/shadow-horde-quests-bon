@@ -1,0 +1,29 @@
+<ShadowProfile Condition="Data.HasCompletedQuest('Centaur Bracers') == false">
+    <SetBaseSettings />
+    <If Condition="Data.HasActiveQuest('Centaur Bracers') == false">
+        <TakeQuest NpcName="Regthar Deathgate" QuestName="Centaur Bracers" />
+
+    </If>
+    <SetBaseSettings />
+    <AddHotspot X="-20" Y="-2038" Z="93" Range="150" />
+    <AddHotspot X="127" Y="-2000" Z="95" Range="150" />
+    <AddHotspot X="231" Y="-1943" Z="92" Range="150" />
+    <AddHotspot X="208" Y="-1842" Z="95" Range="150" />
+    <AddHotspot X="95" Y="-1859" Z="94" Range="150" />
+    <AddHotspot X="-42" Y="-1807" Z="93" Range="150" />
+    <AddHotspot X="-126" Y="-1804" Z="92" Range="150" />
+    <AddHotspot X="-124" Y="-1957" Z="94" Range="150" />
+
+   
+
+    <SetEnableVendoring Value="true"/>
+    <SetVendorNpc NpcName="Uthrok"/>
+    <SetEnableRepairing Value="true"/>
+    <SetRepairNpc NpcName="Uthrok"/>
+    <SetTargetingMode Mode="Around Points" />
+    <ClearMonsterFilter/>
+        <While Condition="Data.QuestObjectiveIsComplete('Centaur Bracers', 1) == false" >
+        <Wait Value="100" />
+    </While>
+    <ReturnQuest NpcName="Regthar Deathgate" QuestName="Centaur Bracers" />
+</ShadowProfile>

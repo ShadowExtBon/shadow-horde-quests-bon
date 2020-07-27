@@ -1,0 +1,26 @@
+<ShadowProfile Condition="Data.HasCompletedQuest('Prowlers of the Barrens') == false">
+    <SetBaseSettings />
+    <If Condition="Data.HasActiveQuest('Prowlers of the Barrens') == false">
+        <TakeQuest NpcName="Sergra Darkthorn" QuestName="Prowlers of the Barrens" />
+
+    </If>
+    <SetBaseSettings />
+    <AddHotspot X="212" Y="-1505" Z="92" Range="100" />
+    <AddHotspot X="42" Y="-1474" Z="93" Range="100" />
+    <AddHotspot X="-66" Y="-1569" Z="92" Range="100" />
+    <AddHotspot X="-212" Y="-1541" Z="92" Range="100" />
+    <AddHotspot X="-335" Y="-1611" Z="92" Range="100" />
+    <AddHotspot X="-576" Y="-1687" Z="92" Range="100" />
+   
+
+    <SetEnableVendoring Value="true"/>
+    <SetVendorNpc NpcName="Uthrok"/>
+    <SetEnableRepairing Value="true"/>
+    <SetRepairNpc NpcName="Uthrok"/>
+    <SetTargetingMode Mode="Around Points" />
+    <ClearMonsterFilter/>
+        <While Condition="Data.QuestObjectiveIsComplete('Prowlers of the Barrens', 1) == false" >
+        <Wait Value="100" />
+    </While>
+    <ReturnQuest NpcName="Sergra Darkthorn" QuestName="Prowlers of the Barrens" />
+</ShadowProfile>

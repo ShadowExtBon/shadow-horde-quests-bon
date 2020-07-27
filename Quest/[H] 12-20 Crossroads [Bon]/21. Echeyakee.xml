@@ -1,0 +1,21 @@
+<ShadowProfile Condition="Data.HasCompletedQuest('Echeyakee') == false">
+    <SetBaseSettings />
+    <If Condition="Data.HasActiveQuest('Echeyakee') == false">
+        <TakeQuest NpcName="Sergra Darkthorn" QuestName="Echeyakee" />
+
+    </If>
+    <SetBaseSettings />
+    <MoveTo X="458.64474487305" Y="-3035.4643554688" Z="91.682014465332" />
+   <UseItem ItemName="Horn of Echeyakee" />
+
+    <SetEnableVendoring Value="true"/>
+    <SetVendorNpc NpcName="Uthrok"/>
+    <SetEnableRepairing Value="true"/>
+    <SetRepairNpc NpcName="Uthrok"/>
+    <SetTargetingMode Mode="Around Points" />
+    <ClearMonsterFilter/>
+        <While Condition="Data.QuestObjectiveIsComplete('Echeyakee', 1) == false" >
+        <Wait Value="100" />
+    </While>
+    <ReturnQuest NpcName="Sergra Darkthorn" QuestName="Echeyakee" />
+</ShadowProfile>

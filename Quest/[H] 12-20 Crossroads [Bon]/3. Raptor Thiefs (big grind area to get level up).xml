@@ -1,0 +1,39 @@
+<ShadowProfile Condition="Data.HasCompletedQuest('Raptor Thieves') == false">
+    <SetBaseSettings />
+    <If Condition="Data.HasActiveQuest('Raptor Thieves') == false">
+        <TakeQuest NpcName="Gazrog" QuestName="Raptor Thieves" />
+
+    </If>
+    <SetBaseSettings />
+    <AddHotspot X="-468" Y="-2461" Z="95" Range="150" />
+    <AddHotspot X="-183" Y="-2275" Z="94" Range="150" />
+    <AddHotspot X="34" Y="-2382" Z="93" Range="150" />
+    <AddHotspot X="89" Y="-2629" Z="95" Range="150" />
+    <AddHotspot X="350" Y="-2602" Z="92" Range="150" />
+    <AddHotspot X="-197" Y="-2746" Z="94" Range="150" />
+    <AddHotspot X="-468" Y="-2839" Z="94" Range="150" />
+    <AddHotspot X="-781" Y="-2918" Z="94" Range="150" />
+    <AddHotspot X="-731" Y="-2549" Z="93" Range="150" />
+
+   
+
+    <SetEnableVendoring Value="true"/>
+    <SetVendorNpc NpcName="Uthrok"/>
+    <SetEnableRepairing Value="true"/>
+    <SetRepairNpc NpcName="Uthrok"/>
+    <SetTargetingMode Mode="Around Points" />
+    <ClearMonsterFilter/>
+
+    <SetMonsterFilterMode Mode="Blacklist" />
+    <AddMonsterFilterName Value="Zhevra Runner"/>          
+    <AddMonsterFilterName Value="Fleeting Plainstrider"/>          
+    <AddMonsterFilterName Value="Ornery Plainstrider"/>          
+
+          
+
+
+        <While Condition="Data.QuestObjectiveIsComplete('Raptor Thieves', 1) == false" >
+        <Wait Value="100" />
+    </While>
+    <ReturnQuest NpcName="Gazrog" QuestName="Raptor Thieves" />
+</ShadowProfile>

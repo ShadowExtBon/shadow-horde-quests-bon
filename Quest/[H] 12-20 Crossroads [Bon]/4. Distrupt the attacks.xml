@@ -1,0 +1,25 @@
+<ShadowProfile Condition="Data.HasCompletedQuest('Disrupt the Attacks') == false">
+    <SetBaseSettings />
+    <If Condition="Data.HasActiveQuest('Disrupt the Attacks') == false">
+        <TakeQuest NpcName="Thork" QuestName="Disrupt the Attacks" />
+
+    </If>
+    <SetBaseSettings />
+    <AddHotspot X="-187" Y="-2904" Z="92" Range="150" />
+    <AddHotspot X="-196" Y="-3008" Z="92" Range="50" />
+    <AddHotspot X="-102" Y="-2962" Z="92" Range="50" />
+    <AddHotspot X="-71" Y="-2843" Z="93" Range="50" />
+    <AddHotspot X="-174" Y="-2845" Z="96" Range="50" />
+   
+
+    <SetEnableVendoring Value="true"/>
+    <SetVendorNpc NpcName="Uthrok"/>
+    <SetEnableRepairing Value="true"/>
+    <SetRepairNpc NpcName="Uthrok"/>
+    <SetTargetingMode Mode="Around Points" />
+    <ClearMonsterFilter/>
+        <While Condition="Data.QuestObjectiveIsComplete('Disrupt the Attacks', 1) == false" >
+        <Wait Value="100" />
+    </While>
+    <ReturnQuest NpcName="Thork" QuestName="Disrupt the Attacks" />
+</ShadowProfile>

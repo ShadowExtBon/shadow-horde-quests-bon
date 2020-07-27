@@ -1,0 +1,33 @@
+<ShadowProfile Condition="Data.HasCompletedQuest('The Disruption Ends') == false">
+    <SetBaseSettings />
+    <If Condition="Data.HasActiveQuest('The Disruption Ends') == false">
+        <TakeQuest NpcName="Thork" QuestName="The Disruption Ends" />
+
+    </If>
+    <SetBaseSettings />
+<SetMonsterFilterMode Mode="Blacklist" />
+    <AddMonsterFilterName Value="Elder Mystic Razorsnout"/>
+    <AddHotspot X="-52" Y="-3159" Z="92" Range="50" />
+    <AddHotspot X="-59" Y="-3344" Z="92" Range="50" />
+<AddHotspot X="-230.63" Y="-3309.05" Z="91.66" Range="50" />
+
+
+    
+   
+
+    <SetEnableVendoring Value="true"/>
+    <SetVendorNpc NpcName="Uthrok"/>
+    <SetEnableRepairing Value="true"/>
+    <SetRepairNpc NpcName="Uthrok"/>
+    <SetTargetingMode Mode="Around Points" />
+
+
+        <While Condition="Data.AllQuestObjectivesAreComplete('The Disruption Ends') == false" >
+
+
+           <Wait Value="100" />
+    </While>
+    <ReturnQuest NpcName="Thork" QuestName="The Disruption Ends" />
+    <ClearMonsterFilter/>
+
+</ShadowProfile>

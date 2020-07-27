@@ -1,0 +1,26 @@
+<ShadowProfile Condition="Data.HasCompletedQuest('Southsea Freebooters') == false">
+    <SetBaseSettings />
+    <If Condition="Data.HasActiveQuest('Southsea Freebooters') == false">
+        <TakeQuest NpcName="Gazlowe" QuestName="Southsea Freebooters" />
+
+    </If>
+    <SetBaseSettings />
+    <AddHotspot X="-1328" Y="-3826" Z="17.5" Range="50" />
+    <AddHotspot X="-1396" Y="-3842" Z="18" Range="50" />
+    <AddHotspot X="-1520" Y="-3826" Z="22" Range="50" />
+    <AddHotspot X="-1608" Y="-3860" Z="14" Range="50" />
+    <AddHotspot X="-1668" Y="-3828" Z="13" Range="50" />
+
+   
+
+    <SetEnableVendoring Value="true"/>
+    <SetVendorNpc NpcName="Uthrok"/>
+    <SetEnableRepairing Value="true"/>
+    <SetRepairNpc NpcName="Uthrok"/>
+    <SetTargetingMode Mode="Around Points" />
+    <ClearMonsterFilter/>
+        <While Condition="Data.AllQuestObjectivesAreComplete('Southsea Freebooters') == false" >
+        <Wait Value="100" />
+    </While>
+    <ReturnQuest NpcName="Gazlowe" QuestName="Southsea Freebooters" />
+</ShadowProfile>
