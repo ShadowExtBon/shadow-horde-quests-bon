@@ -1,5 +1,5 @@
 <ShadowProfile Condition="Data.HasCompletedQuest('Fungal Spores') == false">
-<Lua>HerbNodes[3640]=0</Lua>
+
     <SetBaseSettings />
     <If Condition="Data.HasActiveQuest('Fungal Spores') == false">
         <TakeQuest NpcName="Apothecary Helbrim" QuestName="Fungal Spores" />
@@ -7,8 +7,11 @@
     </If>
     <SetBaseSettings />
 <SetTargetingMode Mode="Gather Only" />
-<SetEnableAutoHerb Value="true" />
+
+    <SetEnableAutoHerb Value="true" />
+    <AllowQuestNode NodeName="Laden Mushroom" />
     <SetEnableQuestNodes Value="true" />
+	
     <AddHotspot X="133.78" Y="-1993.84" Z="95" Range="50" />
     <AddHotspot X="121.64" Y="-1964.64" Z="90" Range="50" />
     <AddHotspot X="118.24" Y="-1926.88" Z="90" Range="50" />

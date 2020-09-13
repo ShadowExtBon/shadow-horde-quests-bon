@@ -1,5 +1,4 @@
 <ShadowProfile Condition="Data.HasCompletedQuest('Stolen Silver') == false">
-<Lua>HerbNodes[147557]=0</Lua>
     <SetBaseSettings />
     <If Condition="Data.HasActiveQuest('Stolen Silver') == false">
         <TakeQuest NpcName="Gazrog" QuestName="Stolen Silver" />
@@ -7,7 +6,8 @@
     </If>
     <SetBaseSettings />
 <SetTargetingMode Mode="Gather Only" />
-<SetEnableAutoHerb Value="true" />
+    <SetEnableAutoHerb Value="true" />
+    <AllowQuestNode NodeName="Stolen Silver" />
     <SetEnableQuestNodes Value="true" />
     <AddHotspot X="-2026.71" Y="-3258.4" Z="92.52" Range="5" />
 

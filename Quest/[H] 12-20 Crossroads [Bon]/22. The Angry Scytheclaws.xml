@@ -1,7 +1,5 @@
 <ShadowProfile Condition="Data.HasCompletedQuest('The Angry Scytheclaws') == false">
-<Lua>HerbNodes[6906]=0</Lua>
-<Lua>HerbNodes[6907]=0</Lua>
-<Lua>HerbNodes[6908]=0</Lua>
+
     <SetBaseSettings />
     <If Condition="Data.HasActiveQuest('The Angry Scytheclaws') == false">
         <TakeQuest NpcName="Sergra Darkthorn" QuestName="The Angry Scytheclaws" />
@@ -24,7 +22,10 @@
 <AddHotspot X="-1502.0270996094" Y="-2706.6047363281" Z="92.685073852539" Range="10"/>
 
 <SetTargetingMode Mode="Gather Only" />
-<SetEnableAutoHerb Value="true" />
+    <SetEnableAutoHerb Value="true" />
+    <AllowQuestNode NodeName="Red Raptor Nest" />
+	<AllowQuestNode NodeName="Blue Raptor Nest" />
+	<AllowQuestNode NodeName="Yellow Raptor Nest" />
     <SetEnableQuestNodes Value="true" />
 
 <Wait Value="100" />

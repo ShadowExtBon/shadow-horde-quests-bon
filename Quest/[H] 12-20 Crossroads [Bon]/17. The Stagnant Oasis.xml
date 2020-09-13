@@ -1,5 +1,5 @@
 <ShadowProfile Condition="Data.HasCompletedQuest('The Stagnant Oasis') == false">
-<Lua>HerbNodes[3737]=0</Lua>
+
 
     <SetBaseSettings />
     <If Condition="Data.HasActiveQuest('The Stagnant Oasis') == false">
@@ -7,8 +7,10 @@
     </If>
 
 <SetTargetingMode Mode="Gather Only" />
-<SetEnableAutoHerb Value="true" />
+    <SetEnableAutoHerb Value="true" />
+    <AllowQuestNode NodeName="Bubbling Fissure" />
     <SetEnableQuestNodes Value="true" />
+	<MoveTo  X="-1275.5246582031" Y="-3011.8154296875" Z="73.094062805176" NoNav="true"/>
     <AddHotspot X="-1275.5246582031" Y="-3011.8154296875" Z="73.094062805176" Range="50" />
 
    

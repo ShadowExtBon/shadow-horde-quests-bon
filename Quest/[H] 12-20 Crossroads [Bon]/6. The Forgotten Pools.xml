@@ -4,10 +4,10 @@
         <TakeQuest NpcName="Tonga Runetotem" QuestName="The Forgotten Pools" />
     </If>
     <SetBaseSettings />
-    <MoveTo  X="84.76" Y="-1945.87" Z="81.59"/>
-<MoveTo  X="96.64" Y="-1941.82" Z="82.49"/>
-<MoveTo  X="95.95" Y="-1949.9" Z="80.52"/>
-<MoveTo  X="81.3" Y="-1938.27" Z="80.62"/>
+    <MoveTo  X="84.76" Y="-1945.87" Z="81.59" NoNav="true"/>
+<MoveTo  X="96.64" Y="-1941.82" Z="82.49" NoNav="true"/>
+<MoveTo  X="95.95" Y="-1949.9" Z="80.52" NoNav="true"/>
+<MoveTo  X="81.3" Y="-1938.27" Z="80.62" NoNav="true"/>
    
 
     <SetEnableVendoring Value="true"/>
@@ -16,7 +16,7 @@
     <SetRepairNpc NpcName="Uthrok"/>
     <SetTargetingMode Mode="Around Points" />
     <ClearMonsterFilter/>
-        <While Condition="Data.QuestObjectiveIsComplete('The Forgotten Pools', 1) == false" >
+        <While Condition="Data.AllQuestObjectivesAreComplete('The Forgotten Pools', 1) == false" >
         <Wait Value="100" />
     </While>
     <ReturnQuest NpcName="Tonga Runetotem" QuestName="The Forgotten Pools" />

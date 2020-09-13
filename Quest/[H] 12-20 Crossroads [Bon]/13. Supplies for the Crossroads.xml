@@ -1,5 +1,5 @@
 <ShadowProfile Condition="Data.HasCompletedQuest('Supplies for the Crossroads') == false">
-<Lua>HerbNodes[175708]=0</Lua>
+
 
     <SetBaseSettings />
     <If Condition="Data.HasActiveQuest('Supplies for the Crossroads') == false">
@@ -9,8 +9,10 @@
     <SetBaseSettings />
 
 <SetTargetingMode Mode="Gather Only" />
-<SetEnableAutoHerb Value="true" />
+
     <SetEnableQuestNodes Value="true" />
+	    <SetEnableAutoHerb Value="true" />
+    <AllowQuestNode NodeName="Crossroads' Supply Crates" />
     <AddHotspot X="-230.63" Y="-3309.05" Z="91.66" Range="5" />
 
 
